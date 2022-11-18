@@ -127,6 +127,8 @@ class ProductController extends Controller
             'cost' => $request->get('prd_cost_price')
         ]);
 
+        return redirect('/admin');
+
     }
 
     /**

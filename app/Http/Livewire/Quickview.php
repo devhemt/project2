@@ -13,7 +13,10 @@ class Quickview extends Component
 
     public function idView($id)
     {
-        $this->prdQV = DB::table('items')->where('prd_id', $id)->get();
+        $this->prdQV = DB::table('items')
+                    ->join('nature1', 'items.prd_id','=', 'nature1.itemsid')
+                    ->select('items.*','nature1.size','nature1.color')    
+                    ->where('prd_id', $id)->get();
     }
     
     public function render()
