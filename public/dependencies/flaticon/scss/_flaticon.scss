@@ -1,0 +1,83 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 03/03/2018 13:41
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+  .fi:before{
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-magnifying-glass:before { content: "\f100"; }
+.flaticon-search-1:before { content: "\f101"; }
+.flaticon-search:before { content: "\f102"; }
+.flaticon-sign:before { content: "\f103"; }
+.flaticon-shopping-online-support:before { content: "\f104"; }
+.flaticon-tool:before { content: "\f105"; }
+.flaticon-shopping-purse-icon:before { content: "\f106"; }
+.flaticon-valentines-heart:before { content: "\f107"; }
+.flaticon-return-of-investment:before { content: "\f108"; }
+.flaticon-list:before { content: "\f109"; }
+.flaticon-bag:before { content: "\f10a"; }
+.flaticon-zoom-in:before { content: "\f10b"; }
+.flaticon-shopping-cart:before { content: "\f10c"; }
+.flaticon-heart:before { content: "\f10d"; }
+.flaticon-avatar:before { content: "\f10e"; }
+.flaticon-menu-1:before { content: "\f10f"; }
+.flaticon-like:before { content: "\f110"; }
+.flaticon-eye:before { content: "\f111"; }
+.flaticon-free-delivery:before { content: "\f112"; }
+.flaticon-close:before { content: "\f113"; }
+.flaticon-compare:before { content: "\f114"; }
+.flaticon-menu:before { content: "\f115"; }
+
+    $font-Flaticon-magnifying-glass: "\f100";
+    $font-Flaticon-search-1: "\f101";
+    $font-Flaticon-search: "\f102";
+    $font-Flaticon-sign: "\f103";
+    $font-Flaticon-shopping-online-support: "\f104";
+    $font-Flaticon-tool: "\f105";
+    $font-Flaticon-shopping-purse-icon: "\f106";
+    $font-Flaticon-valentines-heart: "\f107";
+    $font-Flaticon-return-of-investment: "\f108";
+    $font-Flaticon-list: "\f109";
+    $font-Flaticon-bag: "\f10a";
+    $font-Flaticon-zoom-in: "\f10b";
+    $font-Flaticon-shopping-cart: "\f10c";
+    $font-Flaticon-heart: "\f10d";
+    $font-Flaticon-avatar: "\f10e";
+    $font-Flaticon-menu-1: "\f10f";
+    $font-Flaticon-like: "\f110";
+    $font-Flaticon-eye: "\f111";
+    $font-Flaticon-free-delivery: "\f112";
+    $font-Flaticon-close: "\f113";
+    $font-Flaticon-compare: "\f114";
+    $font-Flaticon-menu: "\f115";

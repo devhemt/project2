@@ -1,0 +1,51 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 28/02/2018 06:40
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../webfonts/Flaticon.eot");
+  src: url("../webfonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../webfonts/Flaticon.woff") format("woff"),
+       url("../webfonts/Flaticon.ttf") format("truetype"),
+       url("../webfonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../webfonts/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+font-style: normal;
+}
+
+.flaticon-magnifying-glass:before { content: "\f100"; }
+.flaticon-search-1:before { content: "\f101"; }
+.flaticon-search:before { content: "\f102"; }
+.flaticon-sign:before { content: "\f103"; }
+.flaticon-shopping-online-support:before { content: "\f104"; }
+.flaticon-tool:before { content: "\f105"; }
+.flaticon-shopping-purse-icon:before { content: "\f106"; }
+.flaticon-valentines-heart:before { content: "\f107"; }
+.flaticon-return-of-investment:before { content: "\f108"; }
+.flaticon-list:before { content: "\f109"; }
+.flaticon-bag:before { content: "\f10a"; }
+.flaticon-zoom-in:before { content: "\f10b"; }
+.flaticon-shopping-cart:before { content: "\f10c"; }
+.flaticon-heart:before { content: "\f10d"; }
+.flaticon-avatar:before { content: "\f10e"; }
+.flaticon-menu-1:before { content: "\f10f"; }
+.flaticon-like:before { content: "\f110"; }
+.flaticon-eye:before { content: "\f111"; }
+.flaticon-free-delivery:before { content: "\f112"; }
+.flaticon-close:before { content: "\f113"; }
+.flaticon-compare:before { content: "\f114"; }
+.flaticon-menu:before { content: "\f115"; }
