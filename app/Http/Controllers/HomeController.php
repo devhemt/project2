@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -14,7 +15,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        return view('frontend.index');
+        return view('client.index');
 
     }
 
@@ -47,7 +48,16 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = DB::table('items')
+            ->join('total_property','items.prd_id','total_property.itemsid')
+            ->where('prd_id', $id)->get();
+        $images = DB::table('images')
+            ->where('itemsid', $id)->get();
+        return view('client.product',[
+            'product' => $product,
+            'images' => $images,
+            'id' => $id,
+        ]);
     }
 
     /**

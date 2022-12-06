@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Nature1>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Totalproperty>
  */
 class Nature1Factory extends Factory
 {
@@ -16,7 +16,7 @@ class Nature1Factory extends Factory
      * @return array<string, mixed>
      */
     private static $itemsid = 7;
-    protected $models = \App\Models\Nature1::class;
+    protected $models = \App\Models\Totalproperty::class;
     public function definition()
     {
         return [

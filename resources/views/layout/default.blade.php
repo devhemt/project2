@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Comercio - Fashion Shop Ecommerce HTML Template</title>
+    <title>King Fashion - Luxurious And Seductive</title>
 
     <!-- Fav Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/fav-icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/fav-icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/fav-icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/img/fav-icons/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('assets/img/fav-icons/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('assets/img/fav-icons/favicon-16x16.png')}}">
 
     <!-- Dependency Styles -->
     <link rel="stylesheet" href="{{ asset('dependencies/bootstrap/css/bootstrap.min.css') }}" type="text/css">
@@ -51,8 +51,8 @@
 
                     <div class="col-lg-6 col-xl-2">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="media/images/logo.png" alt="">
+                            <a href="{{url('/')}}">
+                                <img src="{{asset('images/logo.png')}}" alt="">
                             </a>
                         </div>
                     </div>
@@ -65,8 +65,8 @@
                             <ul id="navigation">
                                 <li><a href="{{ url('/') }}" class="active">home</a>
                                 </li>
-                                <li><a href="{{ url('/shop') }}">Men</a></li>
-                                <li><a href="{{ url('/shop') }}">Woman</a></li>
+{{--                                <li><a href="{{ url('/shop') }}">Men</a></li>--}}
+{{--                                <li><a href="{{ url('/shop') }}">Woman</a></li>--}}
                                 <li class="has-child"><a href="{{ url('/shop') }}">Collections</a>
                                     <div class="mega-menu">
                                         <div class="mega-catagory per-20">
@@ -117,55 +117,7 @@
                                 <li class="user-login">
                                     <a href="{{ url('/login') }}"><i class="fa fa-user" aria-hidden="true"></i></a>
                                 </li>
-                                <li class="top-cart">
-                                    <a href="javascript:void(0)"><i class="fa fa-shopping-cart" aria-hidden="true"></i> (2)</a>
-                                    <div class="cart-drop">
-                                        <div class="single-cart">
-                                            <div class="cart-img">
-                                                <img alt="" src="media/images/product/car1.jpg">
-                                            </div>
-                                            <div class="cart-title">
-                                                <p><a href="">Aliquam Consequat</a></p>
-                                            </div>
-                                            <div class="cart-price">
-                                                <p>1 x $500</p>
-                                            </div>
-                                            <a href="#"><i class="fa fa-times"></i></a>
-                                        </div>
-                                        <div class="single-cart">
-                                            <div class="cart-img">
-                                                <img alt="" src="media/images/product/car2.jpg">
-                                            </div>
-                                            <div class="cart-title">
-                                                <p><a href="">Quisque In Arcuc</a></p>
-                                            </div>
-                                            <div class="cart-price">
-                                                <p>1 x $200</p>
-                                            </div>
-                                            <a href="#"><i class="fa fa-times"></i></a>
-                                        </div>
-                                        <div class="cart-bottom">
-                                            <div class="cart-sub-total">
-                                                <p>Sub-Total <span>$700</span></p>
-                                            </div>
-                                            <div class="cart-sub-total">
-                                                <p>Eco Tax (-2.00)<span>$7.00</span></p>
-                                            </div>
-                                            <div class="cart-sub-total">
-                                                <p>VAT (20%) <span>$40.00</span></p>
-                                            </div>
-                                            <div class="cart-sub-total">
-                                                <p>Total <span>$244.00</span></p>
-                                            </div>
-                                            <div class="cart-checkout">
-                                                <a href="cart.html"><i class="fa fa-shopping-cart"></i>View Cart</a>
-                                            </div>
-                                            <div class="cart-share">
-                                                <a href="#"><i class="fa fa-share"></i>Checkout</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                                @livewire('smallcart')
                                 <li class="top-search">
                                     <a href="javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i>
 									</a>
@@ -272,7 +224,7 @@
                 <ul>
                     <li class="mob-logo">
                         <a href="index.html">
-                            <img src="media/images/logo.png" alt="">
+                            <img src="{{asset('images/logo.png')}}" alt="">
                         </a>
                     </li>
                     <li><a href="#" class="closeme"><i class="flaticon-close"></i></a></li>
@@ -358,7 +310,7 @@
                         <div class="footer-widget">
                             <div class="logo">
                                 <a href="#">
-                                    <img src="media/images/logo2.png" alt="">
+                                    <img src="{{asset('images/logo.png')}}" alt="">
                                 </a>
                             </div>
                             <p>Autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat vel illum dolore eu olestie consequat Autem vel eum iriure dolor.</p>
@@ -410,16 +362,16 @@
                             <div class="payment-link">
                                 <ul>
                                     <li>
-                                        <a href="#"><img src="media/images/p1.png" alt=""></a>
+                                        <a href="#"><img src="{{asset('media/images/p1.png')}}" alt=""></a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="media/images/p2.png" alt=""></a>
+                                        <a href="#"><img src="{{asset('media/images/p2.png')}}" alt=""></a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="media/images/p3.png" alt=""></a>
+                                        <a href="#"><img src="{{asset('media/images/p3.png')}}" alt=""></a>
                                     </li>
                                     <li>
-                                        <a href="#"><img src="media/images/p4.png" alt=""></a>
+                                        <a href="#"><img src="{{asset('media/images/p4.png')}}" alt=""></a>
                                     </li>
                                 </ul>
                             </div>

@@ -1,9 +1,4 @@
-/**
-* Template Name: NiceAdmin - v2.4.1
-* Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 /*--------------------------------------------------------------
 # General
@@ -1298,4 +1293,12 @@ h6 {
 
 .addpd .form-group .btn_image{
   width: 140px;
+}
+
+/*show product*/
+
+.table.table-striped img{
+    height: 140px;
+    width: 100px;
+    object-fit: cover;
 }

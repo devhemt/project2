@@ -80,13 +80,13 @@ class Shop extends Component
             $this->product = DB::table('items')
             ->join('category', 'items.prd_id','=', 'category.prdid')
             ->select('items.*','category.categories')
-            ->where('category.categories', $this->cateId) 
+            ->where('category.categories', $this->cateId)
             ->limit(20)
             ->get()
             ->sortBy('prd_id')
             ;
         }
-        
+
         if ($this->bestsell == false && $this->categorysearch == false && $this->searchflag == false) {
             $this->product = DB::table('items')
             ->join('category', 'items.prd_id','=', 'category.prdid')
@@ -95,7 +95,7 @@ class Shop extends Component
             ->limit(20)
             ->get();
         }
-        
+
 
         if ($this->bestsell && $this->categorysearch == false && $this->searchflag == false) {
             $this->product = DB::table('items')
@@ -113,10 +113,10 @@ class Shop extends Component
                 $p->created_at = 'true';
             };
         }
-        
+
         $this->bestsell;
-        return view('livewire.shop',['product'=>$this->product]);
+        return view('livewire.client.shop',['product'=>$this->product]);
     }
 
-    
+
 }

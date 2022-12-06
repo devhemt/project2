@@ -277,11 +277,11 @@ var THEMEIM = THEMEIM || {};
       });
 
 
-      $('.trigger').on('click', function(e) {
-        e.preventDefault();
+      $('.trigger').on('click', function() {
         var mask = '<div class="mask-overlay">';
 
-        $('.quickview-wrapper').toggleClass('open');
+        // $('.quickview-wrapper').addClass('open');
+        console.log("asds");
         $(mask).hide().appendTo('body').fadeIn('fast');
         $('.mask-overlay, .close-qv').on('click', function() {
           $('.quickview-wrapper').removeClass('open');
@@ -379,6 +379,7 @@ var THEMEIM = THEMEIM || {};
       });
       $("#amount").val("$" + $("#slider-range").slider("values", 0) +
         " to $" + $("#slider-range").slider("values", 1));
+
 
 
 

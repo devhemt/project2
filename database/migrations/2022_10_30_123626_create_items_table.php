@@ -15,12 +15,18 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->increments('prd_id');
-            $table->string('images');
-            $table->string('name',200);
+            $table->integer('staff')->unsigned()->nullable();
+            $table->string('demoimage',200);
+            $table->string('name',150);
             $table->text('description');
             $table->float('price');
             $table->string('tag');
+            $table->smallInteger('provided');
+            $table->string('brand',100);
             $table->timestamps();
+            $table->foreign('staff')
+                ->references('user_id')->on('users')
+                ->onDelete('cascade');
         });
     }
 

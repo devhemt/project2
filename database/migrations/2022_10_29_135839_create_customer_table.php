@@ -19,7 +19,6 @@ return new class extends Migration
             $table->String('email',200)->unique();
             $table->String('phone',20)->unique();
             $table->String('password',200);
-            $table->String('remember_token',100);
             $table->text('address');
             $table->timestamps();
         });

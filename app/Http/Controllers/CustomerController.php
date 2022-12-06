@@ -2,83 +2,83 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function login(Request $request)
     {
-        //
+        if(Auth::guard('customer')->check()){
+            return view('client.account');
+        }
+
+        if ($request->getMethod() == 'GET') {
+            return view('client.auth.login');
+        }
+
+        $request->validate([
+            'email' => 'required|email|exists:customer,email',
+            'password' => 'required|min:6',
+        ]);
+
+        $credentials = $request->only(['email', 'password']);
+        if (Auth::guard('customer')->attempt($credentials)) {
+            return redirect('/');
+        } else {
+            return redirect()->back();
+        }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function registration()
     {
-        //
+        return view('client.auth.create_acc');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function customRegistration(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:customer,email',
+            'phone' => 'required|unique:customer,phone',
+            'password' => 'required|min:6',
+            'address' => 'required',
+        ]);
+
+        $data = $request->all();
+        $check = $this->create($data);
+
+        return redirect('login');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function create(array $data)
     {
-        //
+        return Customer::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'password' => Hash::make($data['password']),
+            'address' => $data['address']
+        ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+//    public function dashboard()
+//    {
+//        if(Auth::check()){
+//            return view('dashboard');
+//        }
+//
+//        return redirect("login")->withSuccess('You are not allowed to access');
+//    }
+
+    public function signOut() {
+        Auth::guard('customer')->logout();
+        Session::flush();
+        return Redirect('login');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

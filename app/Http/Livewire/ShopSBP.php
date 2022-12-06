@@ -9,6 +9,6 @@ class ShopSBP extends Component
 
     public function render()
     {
-        return view('livewire.shop-s-b-p');
+        return view('livewire.client.shop-s-b-p');
     }
 }

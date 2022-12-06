@@ -23,7 +23,7 @@ return new class extends Migration
                   ->onDelete('cascade');
         });
     }
-
+//        0=bihuy 1=chuaxuly 2=daxacnhan 3=dangdonggoi 4=danggiaohang 5=giaohangthanhcong
     /**
      * Reverse the migrations.
      *

@@ -13,7 +13,9 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -136,71 +138,71 @@
 
         </li><!-- End Notification Nav -->
 
-        <li class="nav-item dropdown">
+{{--        <li class="nav-item dropdown">--}}
 
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-chat-left-text"></i>
-            <span class="badge bg-success badge-number">3</span>
-          </a><!-- End Messages Icon -->
+{{--          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">--}}
+{{--            <i class="bi bi-chat-left-text"></i>--}}
+{{--            <span class="badge bg-success badge-number">3</span>--}}
+{{--          </a><!-- End Messages Icon -->--}}
 
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
-            <li class="dropdown-header">
-              You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+{{--          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">--}}
+{{--            <li class="dropdown-header">--}}
+{{--              You have 3 new messages--}}
+{{--              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>--}}
+{{--            </li>--}}
+{{--            <li>--}}
+{{--              <hr class="dropdown-divider">--}}
+{{--            </li>--}}
 
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Maria Hudson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>4 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+{{--            <li class="message-item">--}}
+{{--              <a href="#">--}}
+{{--                <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">--}}
+{{--                <div>--}}
+{{--                  <h4>Maria Hudson</h4>--}}
+{{--                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>--}}
+{{--                  <p>4 hrs. ago</p>--}}
+{{--                </div>--}}
+{{--              </a>--}}
+{{--            </li>--}}
+{{--            <li>--}}
+{{--              <hr class="dropdown-divider">--}}
+{{--            </li>--}}
 
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>Anna Nelson</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>6 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+{{--            <li class="message-item">--}}
+{{--              <a href="#">--}}
+{{--                <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">--}}
+{{--                <div>--}}
+{{--                  <h4>Anna Nelson</h4>--}}
+{{--                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>--}}
+{{--                  <p>6 hrs. ago</p>--}}
+{{--                </div>--}}
+{{--              </a>--}}
+{{--            </li>--}}
+{{--            <li>--}}
+{{--              <hr class="dropdown-divider">--}}
+{{--            </li>--}}
 
-            <li class="message-item">
-              <a href="#">
-                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
-                <div>
-                  <h4>David Muldon</h4>
-                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
-                  <p>8 hrs. ago</p>
-                </div>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+{{--            <li class="message-item">--}}
+{{--              <a href="#">--}}
+{{--                <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">--}}
+{{--                <div>--}}
+{{--                  <h4>David Muldon</h4>--}}
+{{--                  <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>--}}
+{{--                  <p>8 hrs. ago</p>--}}
+{{--                </div>--}}
+{{--              </a>--}}
+{{--            </li>--}}
+{{--            <li>--}}
+{{--              <hr class="dropdown-divider">--}}
+{{--            </li>--}}
 
-            <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
-            </li>
+{{--            <li class="dropdown-footer">--}}
+{{--              <a href="#">Show all messages</a>--}}
+{{--            </li>--}}
 
-          </ul><!-- End Messages Dropdown Items -->
+{{--          </ul><!-- End Messages Dropdown Items -->--}}
 
-        </li><!-- End Messages Nav -->
+{{--        </li><!-- End Messages Nav -->--}}
 
         <li class="nav-item dropdown pe-3">
 
@@ -269,7 +271,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="{{asset('admin')}}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -281,17 +283,22 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="{{ url('product') }}">
+            <a href="{{ url('admin/product') }}">
               <i class="bi bi-circle"></i><span>Show products</span>
             </a>
           </li>
           <li>
-            <a href="{{ url('product/create') }}">
+            <a href="{{ url('admin/product/create') }}">
               <i class="bi bi-circle"></i><span>Add product</span>
             </a>
           </li>
+            <li>
+                <a href="{{ url('admin/addbatch') }}">
+                    <i class="bi bi-circle"></i><span>Add batch</span>
+                </a>
+            </li>
           <li>
-            <a href="{{ url('product/{product}/edit') }}">
+            <a href="{{ url('admin/product/1/edit') }}">
               <i class="bi bi-circle"></i><span>Edit product</span>
             </a>
           </li>
@@ -300,30 +307,50 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>Orders</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Form Elements</span>
+            <a href="{{url('admin/canceledorder')}}">
+              <i class="bi bi-circle"></i><span>Canceled order</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
+            <a href="{{url('admin/noprocessorder')}}">
+              <i class="bi bi-circle"></i><span>Noprocess order</span>
             </a>
           </li>
+            <li>
+                <a href="{{url('admin/confirmedorder')}}">
+                    <i class="bi bi-circle"></i><span>Confirmed order</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url('admin/packingorder')}}">
+                    <i class="bi bi-circle"></i><span>Packing order</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url('admin/deliveryorder')}}">
+                    <i class="bi bi-circle"></i><span>Delivery order</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{url('admin/successfulorder')}}">
+                    <i class="bi bi-circle"></i><span>Sucessful order</span>
+                </a>
+            </li>
         </ul>
       </li><!-- End Forms Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-layout-text-window-reverse"></i><span>Account</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
+            <a href="{{url('admin/profile/create')}}">
+              <i class="bi bi-circle"></i><span>Create account</span>
             </a>
           </li>
           <li>
@@ -362,7 +389,7 @@
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link collapsed" href="{{url('admin/profile')}}">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
@@ -411,9 +438,9 @@
     @yield('content')
 
 
-    
+
       <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-    
+
       <!-- Vendor JS Files -->
       <script src="{{ asset('assetsAdmin/vendor/apexcharts/apexcharts.min.js') }}"></script>
       <script src="{{ asset('assetsAdmin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
@@ -423,10 +450,10 @@
       <script src="{{ asset('assetsAdmin/vendor/simple-datatables/simple-datatables.js') }}"></script>
       <script src="{{ asset('assetsAdmin/vendor/tinymce/tinymce.min.js') }}"></script>
       <script src="{{ asset('assetsAdmin/vendor/php-email-form/validate.js') }}"></script>
-    
+
       <!-- Template Main JS File -->
       <script src="{{ asset('assetsAdmin/js/mainadmin.js') }}"></script>
       @livewireScripts
     </body>
-    
+
     </html>

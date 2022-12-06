@@ -14,55 +14,40 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/acc', function () {
-    return view('frontend.account');
-});
 
 Route::get('/blog', function () {
-    return view('frontend.blog');
+    return view('client.blog');
 });
 
 Route::get('/cart', function () {
-    return view('frontend.cart');
+    return view('client.cart');
 });
 
 Route::get('/contact', function () {
-    return view('frontend.contact');
+    return view('client.contact');
 });
 
 Route::get('/createacc', function () {
-    return view('frontend.auth.create_acc');
-});
-
-Route::get('/login', function () {
-    return view('frontend.auth.login');
-});
-
-Route::get('/prd', function () {
-    return view('frontend.product');
+    return view('client.auth.create_acc');
 });
 
 Route::get('/shop', function () {
-    return view('frontend.shop');
+    return view('client.shop');
 });
 
 Route::get('/singleblog', function () {
-    return view('frontend.single_blog');
+    return view('client.single_blog');
 });
 
+Route::get('/test',[\App\Http\Controllers\InvoiceController::class,'test']);
 
-Route::resource('/', HomeController::class);
+Route::get('/',[\App\Http\Controllers\HomeController::class,'index']);
+Route::get('/product/{id}',[\App\Http\Controllers\HomeController::class, 'show']);
 
-Route::resource('/item', ItemsController::class);
-
-Route::resource('/customer', CustomerController::class);
-
-
+Route::match(['get', 'post'], '/login', [\App\Http\Controllers\CustomerController::class, 'login'])->name('login');
 
 
+Route::get('registration', [\App\Http\Controllers\CustomerController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [\App\Http\Controllers\CustomerController::class, 'customRegistration'])->name('register.custom');
+Route::get('signout', [\App\Http\Controllers\CustomerController::class, 'signOut'])->name('signout');
 
-
-// Route::get('/role',[
-//     'middleware' => 'role:superadmin',
-//     'uses' => 'MainController@checkRole',
-//  ]);
